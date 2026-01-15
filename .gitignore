@@ -1,0 +1,24 @@
+# API Keys and Secrets - NEVER commit these!
+.env
+
+# Python stuff
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Conversations (optional - you might want to commit some as examples)
+conversations/*.json
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log

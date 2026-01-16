@@ -1,5 +1,5 @@
 """
-Islamic AI Chatbot - Main File
+AI Chatbot - Main File
 This is the heart of your chatbot. Read through the comments to understand each part!
 """
 
@@ -14,7 +14,7 @@ from knowledge import get_relevant_context
 # (We'll store this in a .env file)
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-class IslamicChatbot:
+class Chatbot:
     """
     Our chatbot class - this organizes all the chatbot functionality
     Think of it like a container that holds all the chatbot's abilities
@@ -52,7 +52,7 @@ class IslamicChatbot:
         # Step 1: Add the user's message to history
         self.add_message("user", user_message)
         
-        # Step 2: Get relevant Islamic knowledge for context
+        # Step 2: Get relevant knowledge for context
         # This helps the AI give better answers
         context = get_relevant_context(user_message)
         
@@ -107,14 +107,14 @@ def main():
     """
     
     print("=" * 60)
-    print("🕌 Islamic AI Chatbot - Beginner Version")
+    print("🤖 AI Chatbot - Beginner Version")
     print("=" * 60)
-    print("\nWelcome! I can answer questions about Islam.")
+    print("\nWelcome! I'm here to help answer your questions.")
     print("Type your question and press Enter.")
     print("Type 'quit' to exit and save the conversation.\n")
     
     # Create a new chatbot instance
-    chatbot = IslamicChatbot()
+    chatbot = Chatbot()
     
     # Main conversation loop
     while True:
@@ -123,7 +123,7 @@ def main():
         
         # Check if user wants to quit
         if user_input.lower() in ['quit', 'exit', 'bye']:
-            print("\n👋 Goodbye! May peace be upon you.")
+            print("\n👋 Goodbye! Have a great day!")
             chatbot.save_conversation()
             break
         

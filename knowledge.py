@@ -1,75 +1,73 @@
 """
-Knowledge Base - Islamic information for context
+Knowledge Base - General information for context
 This is a simple version - later you'll learn to use databases!
 """
 
-# Basic Islamic knowledge - we'll search through this for relevant info
-ISLAMIC_KNOWLEDGE = {
-    "five_pillars": """
-    The Five Pillars of Islam:
-    1. Shahada - Declaration of faith: "There is no god but Allah, and Muhammad is His messenger"
-    2. Salah - Five daily prayers
-    3. Zakat - Giving charity (2.5% of wealth annually)
-    4. Sawm - Fasting during Ramadan
-    5. Hajj - Pilgrimage to Mecca once in a lifetime if able
+# Basic general knowledge - we'll search through this for relevant info
+GENERAL_KNOWLEDGE = {
+    "programming": """
+    Programming Basics:
+    - Programming is writing instructions for computers
+    - Common languages: Python, JavaScript, Java, C++
+    - Key concepts: variables, loops, functions, classes
+    - Problem-solving and logical thinking are essential
+    - Practice regularly to improve skills
     """,
-    
-    "prayer": """
-    Prayer (Salah) in Islam:
-    - Muslims pray 5 times daily: Fajr (dawn), Dhuhr (noon), Asr (afternoon), Maghrib (sunset), Isha (night)
-    - Prayer involves physical movements and recitation
-    - Direction: Facing the Kaaba in Mecca (Qibla)
-    - Purpose: Direct connection with Allah
-    - Can be performed individually or in congregation
+
+    "ai_ml": """
+    Artificial Intelligence and Machine Learning:
+    - AI: Machines performing tasks that typically require human intelligence
+    - Machine Learning: AI systems that learn from data
+    - Applications: Chatbots, image recognition, recommendations
+    - Requires large amounts of quality data for training
+    - Ethics and responsible use are important considerations
     """,
-    
-    "ramadan": """
-    Ramadan:
-    - The 9th month of Islamic lunar calendar
-    - Muslims fast from dawn to sunset
-    - Fasting includes no food, drink, or intimate relations during daylight
-    - Exceptions: Children, elderly, sick, pregnant, traveling
-    - Purpose: Spiritual reflection, self-discipline, empathy for the poor
-    - Ends with Eid al-Fitr celebration
+
+    "health": """
+    Health and Wellness:
+    - Balanced diet with fruits, vegetables, and lean proteins
+    - Regular exercise: 150 minutes of moderate activity weekly
+    - Adequate sleep: 7-9 hours per night for adults
+    - Mental health is as important as physical health
+    - Regular check-ups and preventive care save lives
     """,
-    
-    "quran": """
-    The Quran:
-    - Holy book of Islam, revealed to Prophet Muhammad (peace be upon him)
-    - Written in Arabic, divided into 114 chapters (Surahs)
-    - Considered the literal word of God (Allah)
-    - Core teachings: Monotheism, morality, guidance for life
-    - Muslims recite it in prayers and study its meanings
+
+    "environment": """
+    Environmental Protection:
+    - Climate change is caused by human activities
+    - Reduce carbon footprint through sustainable choices
+    - Conservation: Reduce, reuse, recycle
+    - Renewable energy sources: Solar, wind, hydro
+    - Protect biodiversity and natural habitats
     """,
-    
-    "prophet": """
-    Prophet Muhammad (peace be upon him):
-    - Born in Mecca around 570 CE
-    - Received first revelation at age 40
-    - Final prophet in Islam
-    - Teachings recorded in Hadith (sayings and actions)
-    - Example of perfect character and conduct
-    - Passed away in 632 CE in Medina
+
+    "education": """
+    Education and Learning:
+    - Lifelong learning keeps the mind active
+    - Different learning styles: visual, auditory, kinesthetic
+    - Setting goals and maintaining discipline helps success
+    - Technology enhances but doesn't replace traditional learning
+    - Critical thinking and problem-solving are key skills
     """,
-    
-    "charity": """
-    Charity in Islam (Zakat):
-    - Mandatory: 2.5% of wealth annually (Zakat)
-    - Voluntary: Sadaqah (any amount, any time)
-    - Given to: Poor, needy, orphans, widows, etc.
-    - Purpose: Purify wealth, help society, reduce inequality
-    - One of the Five Pillars of Islam
+
+    "technology": """
+    Technology Trends:
+    - Cloud computing enables scalable applications
+    - Internet of Things connects everyday devices
+    - Cybersecurity protects digital information
+    - Blockchain provides secure, transparent transactions
+    - Quantum computing may revolutionize computing power
     """,
 }
 
 # Simple keywords to help find relevant knowledge
 KEYWORDS = {
-    "five_pillars": ["pillar", "pillars", "foundation", "basic"],
-    "prayer": ["prayer", "pray", "salah", "namaz"],
-    "ramadan": ["ramadan", "fast", "fasting", "sawm"],
-    "quran": ["quran", "koran", "book", "revelation", "scripture"],
-    "prophet": ["prophet", "muhammad", "messenger"],
-    "charity": ["charity", "zakat", "sadaqah", "giving", "poor"],
+    "programming": ["programming", "code", "coding", "developer", "python", "javascript"],
+    "ai_ml": ["ai", "artificial intelligence", "machine learning", "ml", "chatbot", "neural"],
+    "health": ["health", "wellness", "exercise", "diet", "sleep", "medical"],
+    "environment": ["environment", "climate", "sustainability", "green", "eco", "nature"],
+    "education": ["education", "learning", "study", "school", "knowledge", "teach"],
+    "technology": ["technology", "tech", "computer", "software", "hardware", "digital"],
 }
 
 
@@ -96,14 +94,14 @@ def get_relevant_context(user_message):
         # If any keyword is in the message
         if any(keyword in message_lower for keyword in keywords):
             # Add that topic's knowledge
-            relevant_info.append(ISLAMIC_KNOWLEDGE[topic])
+            relevant_info.append(GENERAL_KNOWLEDGE[topic])
     
     # If we found relevant info, return it
     if relevant_info:
         return "\n\n".join(relevant_info)
     
     # Otherwise, return a general statement
-    return "General Islamic knowledge from authentic sources."
+    return "General knowledge and information on various topics."
 
 
 # You can add more knowledge here as you learn!
@@ -118,7 +116,7 @@ def add_knowledge(topic, content):
     Function to add new knowledge (for future expansion)
     Right now, you'd just edit ISLAMIC_KNOWLEDGE directly
     """
-    ISLAMIC_KNOWLEDGE[topic] = content
+    GENERAL_KNOWLEDGE[topic] = content
     print(f"Added knowledge about: {topic}")
 
 

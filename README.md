@@ -1,10 +1,10 @@
-# Islamic AI Chatbot - Beginner Version
+# AI Chatbot - Beginner Version
 
-A simple chatbot that answers questions about Islam using OpenAI's API. Perfect for learning machine learning basics!
+A simple chatbot that answers questions on various topics using OpenAI's API. Perfect for learning machine learning basics!
 
 ## 🎯 What This Project Does
 
-- Takes questions about Islam
+- Takes questions on various topics
 - Uses OpenAI (ChatGPT) to provide thoughtful answers
 - Saves conversation history
 - Runs on your local computer (no cloud needed yet!)
@@ -12,10 +12,10 @@ A simple chatbot that answers questions about Islam using OpenAI's API. Perfect 
 ## 📁 Simple Folder Structure
 
 ```
-islamic-chatbot/
+ai-chatbot/
 ├── chatbot.py          # Main chatbot code (START HERE!)
 ├── config.py           # Settings and API keys
-├── knowledge.py        # Islamic knowledge base
+├── knowledge.py        # General knowledge base
 ├── requirements.txt    # Python packages needed
 ├── .env               # Your secret API key (create this)
 ├── .gitignore         # Files to ignore in git
@@ -40,8 +40,8 @@ python --version
 ### Step 3: Clone and Setup
 ```bash
 # Create project folder
-mkdir islamic-chatbot
-cd islamic-chatbot
+mkdir ai-chatbot
+cd ai-chatbot
 
 # Create virtual environment
 python -m venv venv
@@ -71,10 +71,10 @@ python chatbot.py
 
 Once running, you'll see:
 ```
-Islamic Chatbot Ready! Type 'quit' to exit.
+AI Chatbot Ready! Type 'quit' to exit.
 
-You: What are the five pillars of Islam?
-Bot: The five pillars of Islam are...
+You: What is machine learning?
+Bot: Machine learning is a type of AI that...
 ```
 
 ## 🧠 Learning Path
@@ -86,7 +86,7 @@ Bot: The five pillars of Islam are...
 - Look at saved conversations in `conversations/` folder
 
 ### Week 2: Customization
-- Modify `knowledge.py` to add more Islamic facts
+- Modify `knowledge.py` to add more general knowledge
 - Change the chatbot's personality in `config.py`
 - Experiment with different questions
 
@@ -154,8 +154,8 @@ pip install -r requirements.txt
 
 1. **Never share your API key** - Keep `.env` file private
 2. **Don't commit `.env` to GitHub** - It's in `.gitignore`
-3. **Religious accuracy** - This is a learning tool, not a fatwa source
-4. **Always verify** - Check important answers with scholars
+3. **AI limitations** - This is a learning tool, answers may not always be perfectly accurate
+4. **Always verify** - Check important information from reliable sources
 
 ## 📚 Next Steps After This
 

@@ -16,8 +16,8 @@ Follow these steps to get your chatbot running TODAY.
 ### On Mac/Linux:
 ```bash
 # Create folder
-mkdir islamic-chatbot
-cd islamic-chatbot
+mkdir ai-chatbot
+cd ai-chatbot
 
 # Run setup
 bash setup.sh
@@ -30,8 +30,8 @@ nano .env
 ### On Windows:
 ```bash
 # Create folder
-mkdir islamic-chatbot
-cd islamic-chatbot
+mkdir ai-chatbot
+cd ai-chatbot
 
 # Create virtual environment
 python -m venv venv
@@ -55,23 +55,23 @@ python chatbot.py
 
 You should see:
 ```
-🕌 Islamic AI Chatbot - Beginner Version
+🤖 AI Chatbot - Beginner Version
 ========================================
 
-Welcome! I can answer questions about Islam.
+Welcome! I'm here to help answer your questions.
 Type your question and press Enter.
 Type 'quit' to exit and save the conversation.
 
-You: 
+You:
 ```
 
 ## First Question to Try
 
 ```
-You: What are the five pillars of Islam?
+You: What is machine learning?
 ```
 
-The bot will explain them to you!
+The bot will explain it to you!
 
 ## Common Issues
 
@@ -103,7 +103,7 @@ pip install -r requirements.txt
 **Day 2:** Read and understand `chatbot.py`
 **Day 3:** Read and understand `config.py` and `knowledge.py`
 **Day 4:** Try modifying the system prompt
-**Day 5:** Add new knowledge to `knowledge.py`
+**Day 5:** Add new general knowledge to `knowledge.py`
 
 **Week 2:** Start learning about:
 - How the OpenAI API works

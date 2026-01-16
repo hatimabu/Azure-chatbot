@@ -116,7 +116,7 @@ FUNCTION_APP_NAME=$(terraform output -raw function_app_name)
 # Set your OpenAI API key
 az functionapp config appsettings set \
   --name $FUNCTION_APP_NAME \
-  --resource-group islamic-chatbot-rg \
+  --resource-group ai-chatbot-rg \
   --settings "OPENAI_API_KEY=your-key-here"
 ```
 
@@ -158,7 +158,7 @@ Share your URL with others!
 ### View Logs
 ```bash
 # Real-time logs
-az functionapp log tail --name $FUNCTION_APP_NAME --resource-group islamic-chatbot-rg
+az functionapp log tail --name $FUNCTION_APP_NAME --resource-group ai-chatbot-rg
 
 # Or use Azure Portal: portal.azure.com
 ```
@@ -178,10 +178,10 @@ az consumption usage list --start-date 2026-01-01 --end-date 2026-01-31
 ### Stop Everything (Pause Costs)
 ```bash
 # Stop the function app (keeps data)
-az functionapp stop --name $FUNCTION_APP_NAME --resource-group islamic-chatbot-rg
+az functionapp stop --name $FUNCTION_APP_NAME --resource-group ai-chatbot-rg
 
 # Start it again later
-az functionapp start --name $FUNCTION_APP_NAME --resource-group islamic-chatbot-rg
+az functionapp start --name $FUNCTION_APP_NAME --resource-group ai-chatbot-rg
 ```
 
 ### Delete Everything
@@ -208,14 +208,14 @@ Someone else might have the same name. Edit `variables.tf` and change `project_n
 ### "Deployment failed"
 Check logs:
 ```bash
-az functionapp log tail --name $FUNCTION_APP_NAME --resource-group islamic-chatbot-rg
+az functionapp log tail --name $FUNCTION_APP_NAME --resource-group ai-chatbot-rg
 ```
 
 ## 📊 Monitoring Your App
 
 ### Azure Portal
 1. Go to https://portal.azure.com
-2. Find your Resource Group: `islamic-chatbot-rg`
+2. Find your Resource Group: `ai-chatbot-rg`
 3. Click on your Function App
 4. View:
    - Metrics (requests, errors)

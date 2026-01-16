@@ -97,7 +97,7 @@ def health_check(req: func.HttpRequest) -> func.HttpResponse:
     GET /api/health
     """
     return func.HttpResponse(
-        json.dumps({"status": "healthy", "service": "islamic-chatbot"}),
+        json.dumps({"status": "healthy", "service": "ai-chatbot"}),
         status_code=200,
         mimetype="application/json"
     )
